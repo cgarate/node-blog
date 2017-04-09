@@ -22,7 +22,7 @@ const posts = [
     author: 'Emma',
     title: 'Streams',
     body: 'Blog post number 3'
-  }
+  },
   {
     id: 4,
     author: 'Cody',
@@ -43,7 +43,7 @@ app.get('/', (req, res) => {
 // blog post
 app.get('/post/:id', (req, res) => {
   //find the post in the `posts` array
-  const post = post.filter((post) => {
+  const post = posts.filter((post) => {
     return post.id == req.params.id
   })[0]
 
